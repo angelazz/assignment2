@@ -53,13 +53,13 @@ defmodule Ex02 do
   # if the first two elements of a list are equal                #
   ################################################################
 
- first2equal = fn
+  first2equal = fn
       
-      ([a|[a| _tail]]) -> true
+      [a,a| _tail] -> true
 
-      ([_|_]) ->false    
+      [a,b| _tail] ->false    
 
-      ([])-> false
+      []-> false
 
   end
 
